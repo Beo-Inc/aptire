@@ -21,7 +21,7 @@ class User < ApplicationRecord
     where(developer: true).where(id: id).includes(:links, :skills, :employments).first
   end)
   scope :profile_data, (lambda do |id|
-    where(id: id).includes(:links, :skills, :employments, :newsletters_subscriptions).first
+    where(id: id).includes(:links, :skills, :employments, :newsletters_subscription).first
   end)
 
   def profile_image_url

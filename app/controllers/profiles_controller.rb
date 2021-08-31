@@ -3,6 +3,6 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @profile_data = User.profile_data(params[:id])
+    @profile_data = User.profile_data(current_user.id)
   end
 end
