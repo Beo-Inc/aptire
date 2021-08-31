@@ -20,6 +20,9 @@ class User < ApplicationRecord
   scope :is_developer_with_details, (lambda do |id|
     where(developer: true).where(id: id).includes(:links, :skills, :employments).first
   end)
+  scope :profile_data, (lambda do |id|
+    where(id: id).includes(:links, :skills, :employments, :newsletters_subscriptions).first
+  end)
 
   def profile_image_url
     profile_image.blob.service_url if profile_image.attached?
