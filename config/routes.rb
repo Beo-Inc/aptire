@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     defaults: { format: :json }
 
   resources :users, defaults: { format: :json }
+  resources :profiles, only: [:show] defaults: { format: :json }
   resources :developers, only: [:index, :show], defaults: { format: :json }
   resources :employments, except: [ :new, :show, :edit ], defaults: { format: :json }
   resources :links, except: [ :new, :show, :edit ], defaults: { format: :json }
