@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "dev_point_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'anewman15-dev-point.netlify.app', protocol: 'http' }
+  config.action_mailer.default_url_options = { host: 'anewman15-dev-point.herokuapp.com', protocol: 'https' }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
