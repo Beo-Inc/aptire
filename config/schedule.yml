@@ -1,4 +1,4 @@
 send_monday_morning_newsletter:
-  cron: "* * * * *"
+  cron: "0 9 * * 1"
   class: "SendMondayMorningNewsletterJob"
   queue: default
